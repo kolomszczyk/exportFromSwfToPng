@@ -8,7 +8,22 @@ import swfTools
 
 # root directory is directory 
 # that hold all swf files 
-rootDir = "/home/nefex/exportswf/swfFiles/"
+rootDir = ""
+import setting
+rootDir = setting.rootDir
+
+if( rootDir == "" ):
+	print("dont have setting.py file")
+	print("need to create one ")
+	print("and make rootDir vareble")
+	print("wich will be path to swf folder")
+	print("example: echo rootDir = '/example/path/' > setting.py")
+	exit()
+# rootDir = ""/home/nefex/exportswf/swfFiles/
+
+
+
+# make pic folder inside of rootDir 
 swfTools.mkDirForScreenshots(rootDir)
 
 # get list of apps 	
