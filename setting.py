@@ -1,2 +1,2 @@
 #! /usr/bin/python
-rootDir = "/home/nefex/exportswf/swfFiles/"
+rootDir = "/home/nefex/exportFromSwfToPng/swfFiles/"

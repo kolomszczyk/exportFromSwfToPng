@@ -47,11 +47,12 @@ def mkDirForScreenshots(folder):
     os.system("mkdir -p {}pic".format(folder))
 
 def takeScreenshot(fileToSaveSceenshot):
-    os.system("gnome-screenshot -f {}"
+    os.system("gnome-screenshot -w -f {} 2> /dev/null "
         .format(fileToSaveSceenshot))
 
 def chengeFileFromSwfToPng(file):
     newFile = file.split(".")
+    out = ""
     if(newFile[len(newFile) -1 ] == "swf"):
         newFile[len(newFile) -1 ] = "png"
         file = ""
@@ -62,5 +63,5 @@ def chengeFileFromSwfToPng(file):
             else:
                 file += string
             count += 1
-        newFile = file
-    return newFile
+        out = file
+    return out

@@ -48,9 +48,10 @@ for file in listOfFiles:
 
 	# 	take screenshot and save 
 	newFile = swfTools.chengeFileFromSwfToPng(file)
+	# print(type(newFile), newFile)
 
 	swfTools.takeScreenshot(rootDir + "pic/" + newFile)
-
+	print("taking screenshot {}".format(rootDir + "pic/" + newFile))
 	# 	close flashplayer 
 	swfTools.closeFlashApp()
 
